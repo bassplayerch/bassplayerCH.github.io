@@ -1,0 +1,52 @@
+@import "../variables";
+
+#navBar {
+  background: $darkColor;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  hr {
+    border: none;
+    height: 1px;
+    color: $lightColor;
+    background-color: $lightColor;
+  }
+
+  .titleBar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    h1 {
+      padding-top: 1.2rem;
+      padding-left: 1rem;
+    }
+    #hamburgerIcon {
+      margin-top: 1.4rem;
+      margin-right: 0.4rem;
+      span {
+        background: $lightColor;
+      }
+    }
+
+  }
+  .navigation {
+    ul {
+      li {
+        padding-left: 1rem;
+        &:hover {
+          background-color: $lightColor;
+          color: $darkColor;
+        }
+        a {
+          font-size: $size3;
+          line-height: 3rem;
+        }
+      }
+
+    }
+  }
+}
+
+  .sideBarOpen {
+    display: none;
+  }
