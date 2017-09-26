@@ -16,6 +16,8 @@ for (var i = 0; i < navLinks.length; i++) {
 
     });
 }
+
+
 // document.addEventListener('scroll', function () {
 //     var news = document.getElementById('news');
 //     console.log(window.scrollY, news.offsetTop);

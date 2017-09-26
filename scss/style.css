@@ -67,7 +67,8 @@ h6 {
   background: #191b1d;
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 99; }
   #navBar hr {
     border: none;
     height: 1px;
@@ -165,18 +166,79 @@ h6 {
   #hamburgerIcon {
     display: none; } }
 #news {
-  margin-top: 100vh; }
+  min-height: 100vh; }
+  #news .juicerWrapper {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px; }
 
+#header {
+  background: url(../../../img/header_image.jpg) no-repeat fixed center center;
+  background-size: cover;
+  height: 100vh; }
+  #header .headerContent {
+    margin: 0 auto;
+    top: 45%;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    text-align: center; }
+    #header .headerContent h1 {
+      font-size: 2.6rem;
+      color: white;
+      font-weight: bolder; }
+    #header .headerContent button {
+      margin-top: 30px;
+      background-color: #f1d9cd;
+      color: #191b1d;
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.1rem; }
+      #header .headerContent button:hover {
+        color: #f1d9cd;
+        background: #191b1d; }
+
+h1.referral {
+  display: none !important; }
+
+li.juicer {
+  display: none !important; }
+
+@media (min-width: 1172px) {
+  #juicerMobile {
+    display: none; } }
+@media (max-width: 1171px) {
+  #juicerFull {
+    display: none; } }
 body {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
   height: 100vh;
   width: 100vw;
-  background: url(../img/header_image.jpg) no-repeat fixed center center;
-  background-size: cover;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Raleway', sans-serif; }
 
 .section {
-  height: 100vh;
-  background-size: cover; }
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-size: cover;
+  text-align: center; }
+  .section .sectionTitle {
+    border: 5px solid;
+    padding: 8px;
+    text-align: center;
+    display: inline-block;
+    margin: 37px auto 0; }
+  .section .sectionTitleLight {
+    border-color: #191b1d;
+    color: #191b1d; }
+  .section .sectionTitleDark {
+    border-color: #f1d9cd;
+    color: #f1d9cd; }
 
 .light-section {
   color: #191b1d;
@@ -185,5 +247,9 @@ body {
 .dark-section {
   color: #f1d9cd;
   background: url(../img/dark_section.jpg) no-repeat fixed center center; }
+
+#header {
+  background: url(../img/header_image.jpg) no-repeat fixed center center;
+  background-size: cover; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,13 @@
 @import "../variables";
 
 #news {
-  margin-top: 100vh;
+min-height: 100vh;
+  .juicerWrapper {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
 }
 
 @media(min-width: 768px) {

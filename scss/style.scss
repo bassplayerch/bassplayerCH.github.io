@@ -4,20 +4,45 @@
 @import "partials/sections/hamburgerIcon";
 @import "partials/sections/about";
 @import "partials/sections/news";
+@import "partials/sections/header";
+@import "partials/sections/album";
+@import "partials/sections/juicer";
+
 
 body {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
   height: 100vh;
   width: 100vw;
-  background: url(../img/header_image.jpg) no-repeat fixed center center;
-  background-size: cover;
   font-family: 'Raleway', sans-serif;
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100%;
   background-size: cover;
+  text-align: center;
+  .sectionTitle {
+    border: 5px solid;
+    padding: 8px;
+    text-align: center;
+    display: inline-block;
+    margin: 37px auto 0;
+  }
+
+  .sectionTitleLight {
+    border-color: $darkColor;
+    color: $darkColor;
+  }
+  .sectionTitleDark {
+    border-color: $lightColor;
+    color: $lightColor;
+  }
 
 }
+
 .light-section {
   color: $darkColor;
   background: url(../img/light_section.jpg) no-repeat fixed center center;
@@ -30,8 +55,10 @@ body {
 
 }
 
-
+#header {
+  background: url(../img/header_image.jpg) no-repeat fixed center center;
+  background-size: cover;
+}
 @media(min-width: 768px) {
-
 
 }
