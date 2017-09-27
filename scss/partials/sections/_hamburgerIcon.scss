@@ -1,5 +1,6 @@
 @import "../variables";
- #hamburgerIcon {
+
+#hamburgerIcon {
   width: 60px;
   height: 20px;
   position: relative;
@@ -33,14 +34,13 @@
   transition: .25s ease-in-out;
 }
 
-
 /* Icon 3 */
 
 #hamburgerIcon span:nth-child(1) {
   top: 0px;
 }
 
-#hamburgerIcon span:nth-child(2),#hamburgerIcon span:nth-child(3) {
+#hamburgerIcon span:nth-child(2), #hamburgerIcon span:nth-child(3) {
   top: 18px;
 }
 
@@ -72,6 +72,52 @@
   top: 18px;
   width: 0%;
   left: 50%;
+}
+
+#scrollDown a {
+  padding-top: 60px;
+}
+
+
+
+#scrollDown a span {
+  background: $lightColor;
+  position: absolute;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid $darkColor;
+  border-radius: 100%;
+  box-sizing: border-box;
+  &:hover{
+    background: $darkColor;
+    border-color: $lightColor;
+    }
+  &:hover::after {
+    background: $darkColor;
+    border-color: $lightColor;
+  }
+}
+
+#scrollDown a span::after {
+  background: $lightColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid $darkColor;
+  border-bottom: 1px solid $darkColor;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+  &:hover {
+    background: $darkColor;
+    border-color: $lightColor;
+  }
 }
 
 @media(min-width: 768px) {

@@ -2,35 +2,44 @@
 
 
 #header {
+  z-index: 1;
   background: url(../../../img/header_image.jpg) no-repeat fixed center center;
   background-size: cover;
   height: 100vh;
   .headerContent {
+    z-index: 2;
     margin: 0 auto;
-    top: 45%;
+    top: 25%;
     position: relative;
     width: 100%;
     display: inline-block;
     text-align: center;
-    h1{
-      font-size: 2.6rem;
+
+    h1 {
+      font-size: 3.0rem;
       color: white;
-      font-weight: bolder;
+      display: none;
+      font-family: 'Shadows Into Light', cursive;
     }
-    button {
-      margin-top: 30px;
-      background-color: $lightColor;
-      color: $darkColor;
-      border: none;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 1.1rem;
-      &:hover{
-        color: $lightColor;
-        background: $darkColor;
+
+    .album {
+      margin-top: 90px;
+      height: 300px;
+
+      img {
+        max-height: 300px;
+        max-width: 300px;
+        -webkit-box-shadow: 10px 10px 71px 0px rgba(0,0,0,0.55);
+        -moz-box-shadow: 10px 10px 71px 0px rgba(0,0,0,0.55);
+        box-shadow: 10px 10px 71px 0px rgba(0,0,0,0.55);
       }
     }
+
+    .orderButton {
+      width: 300px;
+      margin-top: 0;
+
+    }
+
   }
 }

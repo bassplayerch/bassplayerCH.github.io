@@ -162,6 +162,44 @@ h6 {
   width: 0%;
   left: 50%; }
 
+#scrollDown a {
+  padding-top: 60px; }
+
+#scrollDown a span {
+  background: #f1d9cd;
+  position: absolute;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #191b1d;
+  border-radius: 100%;
+  box-sizing: border-box; }
+  #scrollDown a span:hover {
+    background: #191b1d;
+    border-color: #f1d9cd; }
+  #scrollDown a span:hover::after {
+    background: #191b1d;
+    border-color: #f1d9cd; }
+
+#scrollDown a span::after {
+  background: #f1d9cd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #191b1d;
+  border-bottom: 1px solid #191b1d;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box; }
+  #scrollDown a span::after:hover {
+    background: #191b1d;
+    border-color: #f1d9cd; }
+
 @media (min-width: 768px) {
   #hamburgerIcon {
     display: none; } }
@@ -173,33 +211,35 @@ h6 {
     margin-right: 20px; }
 
 #header {
+  z-index: 1;
   background: url(../../../img/header_image.jpg) no-repeat fixed center center;
   background-size: cover;
   height: 100vh; }
   #header .headerContent {
+    z-index: 2;
     margin: 0 auto;
-    top: 45%;
+    top: 25%;
     position: relative;
     width: 100%;
     display: inline-block;
     text-align: center; }
     #header .headerContent h1 {
-      font-size: 2.6rem;
+      font-size: 3.0rem;
       color: white;
-      font-weight: bolder; }
-    #header .headerContent button {
-      margin-top: 30px;
-      background-color: #f1d9cd;
-      color: #191b1d;
-      border: none;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 1.1rem; }
-      #header .headerContent button:hover {
-        color: #f1d9cd;
-        background: #191b1d; }
+      display: none;
+      font-family: 'Shadows Into Light', cursive; }
+    #header .headerContent .album {
+      margin-top: 90px;
+      height: 300px; }
+      #header .headerContent .album img {
+        max-height: 300px;
+        max-width: 300px;
+        -webkit-box-shadow: 10px 10px 71px 0px rgba(0, 0, 0, 0.55);
+        -moz-box-shadow: 10px 10px 71px 0px rgba(0, 0, 0, 0.55);
+        box-shadow: 10px 10px 71px 0px rgba(0, 0, 0, 0.55); }
+    #header .headerContent .orderButton {
+      width: 300px;
+      margin-top: 0; }
 
 h1.referral {
   display: none !important; }
@@ -239,6 +279,20 @@ body {
   .section .sectionTitleDark {
     border-color: #f1d9cd;
     color: #f1d9cd; }
+
+.button {
+  margin-top: 70px;
+  background-color: #f1d9cd;
+  color: #191b1d;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.1rem; }
+  .button:hover {
+    color: #f1d9cd;
+    background: #191b1d; }
 
 .light-section {
   color: #191b1d;

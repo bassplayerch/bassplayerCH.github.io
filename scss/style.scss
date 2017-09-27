@@ -40,7 +40,22 @@ body {
     border-color: $lightColor;
     color: $lightColor;
   }
+}
 
+.button {
+  margin-top: 70px;
+  background-color: $lightColor;
+  color: $darkColor;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.1rem;
+  &:hover{
+    color: $lightColor;
+    background: $darkColor;
+  }
 }
 
 .light-section {
