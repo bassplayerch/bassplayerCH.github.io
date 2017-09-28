@@ -1,5 +1,37 @@
 @import "../variables";
 
+#about {
+  .aboutText {
+    margin-top: 30px;
+    text-align: left;
+    margin-left: $marginLeft;
+    margin-right: 20px;
+  }
+
+  img {
+    text-align: left;
+    display: block;
+    margin-top: 30px;
+    margin-left: $marginLeft;
+    width: 55%;
+    max-width: 260px;
+  }
+
+  a {
+    margin-right: 100%;
+    margin-top: 7px;
+    margin-left: $marginLeft;
+  }
+  .lastButton {
+    margin-bottom: 20px;
+  }
+
+  .bandDivider {
+    border-color: $lightColor;
+  }
+
+}
+
 
 
 @media(min-width: 768px) {

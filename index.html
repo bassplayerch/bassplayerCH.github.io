@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="scss/style.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+
+
+
     <title>Document</title>
 </head>
 
@@ -39,21 +42,18 @@
     <section id="header">
         <div class="headerContent">
             <h1>BELLE AND BASS</h1>
-            <div class="album">
-                <img src="img/album_cover.jpg" alt="On and On Albumcover">
-                <button class="button orderButton">ORDER NOW</button>
-                <div id="scrollDown">
-                    <h1>Scroll Down Button #2</h1>
-                    <a href="#"><span></span></a>
+            <div class="albumContainer">
+                <div class="albumWrapper">
+                    <img src="img/album_cover.jpg" alt="album cover" class="album">
+                    <a class="button buttonLight" href="album.html">ORDER NOW</a>
                 </div>
             </div>
-
-
         </div>
     </section>
-    <section id="album">
 
+    <section id="album">
     </section>
+
     <section id="news" class="section light-section">
         <h1 class="sectionTitle sectionTitleLight">NEWS</h1>
         <div class="juicerWrapper">
@@ -67,41 +67,35 @@
     </section>
     <section id="about" class="section dark-section">
         <h1 class="sectionTitle sectionTitleDark">ÜBER UNS</h1>
-
-
-        <form action="https://www.enformed.io/p36q7kor" method="POST">
-
-            <div class="form-group">
-                <label>Name</label>
-                <input name="first_name" type="text" class="form-control"/>
-            </div>
-
-            <div class="form-group">
-                <label>Your car</label>
-                <select name="car" class="form-control"/>
-                <option value="Honda" class="form-control"/>Honda</option>
-                <option value="Subaru" class="form-control"/>Subaru</option>
-                <option value="Toyota" class="form-control"/>Toyota</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label>Your message</label>
-                <textarea name="message" type="text" class="form-control"/></textarea>
-            </div>
-            <!-- Submit your form with a button -->
-            <button type="submit" class="btn btn-default">Submit Me</button>
-
-            <!-- or with an input -->
-            <input type="submit" class="btn btn-default" value="Finish!" />
-
-        </form>
-
+        <p class="aboutText">“Kleine Besetzung, grosse Wirkung” – Das ist das Motto des engagierten Musikerduo Belle and
+            Bass.
+            Minimalistisch und doch klangvoll spielen die beiden Musiker Eigenkompositionen und Klassiker des Jazz- und
+            Popbereichs. Die einzigartige Kombination von Gesang und Bass verschafft jedem Song eine besondere Note, die
+            für sinnliche und feierliche Anlässe geeignet ist.</p>
+        <img src="img/stefan.jpg" alt="stefan guggisberg / ebass">
+        <p class="aboutText">Stefan Guggisberg, spielte schon in mehreren Formationen verschiedener Stilrichtungen und
+            zeigt durch seine
+            künstlerlische Vielfalt, dass der Bass nicht nur ein eintöniges Saiteninstrument ist.</p>
+        <a class="button buttonDark" href="http://www.bassplayer.ch">www.bassplayer.ch</a>
+        <hr class="bandDivider">
+        <img src="img/kira.jpg" alt="stefan guggisberg / ebass">
+        <p class="aboutText">Die vielseitig interessierte Sängerin und Komponistin, Kira Stahel, sammelte bisher viel
+            Erfahrung in verschiedenen Gesangsbereichen wie Jazz, Pop, dem indischen oder bulgarischen Gesang. Seit 2014
+            studiert sie an der Hochschule Luzern im Institut Musik, wo sie von Neuem inspiriert wird.</p>
+        <a class="button buttonDark lastButton" href="http://www.kirastahel.ch">www.kirastahel.ch</a>
 
 
     </section>
-    <section id="demos" class="section light-section">
-        <h1 class="sectionTitle sectionTitleLight">DEMOS/AGENDA</h1>
+    <section id="sound" class="section light-section">
+        <h1 class="sectionTitle sectionTitleLight">SOUND</h1>
+        <h2>On and On Again</h2>
+        <p>Nach fast einem Jahr Arbeit und einer erfolgreichen Crowdfunding Kampaggne konnten wir endlich unser erstes Album releasen. Das Album könnt ihr entweder direkt bei uns bestellen (Physikalisch 20.- inkl. Versand / Download 17.-) oder bei allen grossen Online Musikstores kaufen. </p>
+        <a class="button buttonDark" href="album.html">ORDER NOW</a>
+        <div class="soundcloudMobile">
+            <iframe width="100%" height="400" scrolling="no" frameborder="no"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/356076273&amp;color=%23f1d9cd&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+
     </section>
     <section id="galerie" class="section dark-section">
         <h1 class="sectionTitle sectionTitleDark">GALERIE</h1>

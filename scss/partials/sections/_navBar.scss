@@ -5,6 +5,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  min-width: 311px;
   z-index: 99;
   hr {
     border: none;
@@ -28,7 +29,6 @@
         background: $lightColor;
       }
     }
-
   }
   .navigation {
     ul {
@@ -48,6 +48,17 @@
   }
 }
 
-  .sideBarOpen {
-    display: none;
+.sideBarOpen {
+  display: none;
+}
+
+@media(max-width: 365px) {
+
+  #navBar {
+    .titleBar {
+      h1 {
+        font-size: 2rem !important;
+      }
+    }
   }
+}

@@ -7,6 +7,7 @@
 @import "partials/sections/header";
 @import "partials/sections/album";
 @import "partials/sections/juicer";
+@import "partials/sections/sound";
 
 
 body {
@@ -16,6 +17,8 @@ body {
   height: 100vh;
   width: 100vw;
   font-family: 'Raleway', sans-serif;
+  min-width: 300px;
+  min-height: 300px;
 }
 
 .section {
@@ -43,18 +46,30 @@ body {
 }
 
 .button {
-  margin-top: 70px;
-  background-color: $lightColor;
-  color: $darkColor;
+
   border: none;
   padding: 15px 32px;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 1.1rem;
+  display:inline-block;
+
+}
+
+.buttonLight {
+  background-color: $lightColor;
+  color: $darkColor;
   &:hover{
+    background-color: $darkColor;
     color: $lightColor;
-    background: $darkColor;
+  }
+}
+
+.buttonDark {
+  background-color: $darkColor;
+  color: $lightColor !important;
+  &:hover{
+    background-color: $lightColor;
+    color: $darkColor !important;
   }
 }
 
@@ -69,6 +84,17 @@ body {
   background: url(../img/dark_section.jpg) no-repeat fixed center center;
 
 }
+
+.album {
+  background: url(../img/album_cover.jpg) no-repeat fixed center center;
+  height: 30%;
+  width: 30%;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+
 
 #header {
   background: url(../img/header_image.jpg) no-repeat fixed center center;

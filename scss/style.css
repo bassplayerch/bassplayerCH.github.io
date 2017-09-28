@@ -63,11 +63,15 @@ h5 {
 h6 {
   font-size: 1rem; }
 
+p {
+  line-height: 1.5rem; }
+
 #navBar {
   background: #191b1d;
   position: fixed;
   top: 0;
   width: 100%;
+  min-width: 311px;
   z-index: 99; }
   #navBar hr {
     border: none;
@@ -98,6 +102,9 @@ h6 {
 .sideBarOpen {
   display: none; }
 
+@media (max-width: 365px) {
+  #navBar .titleBar h1 {
+    font-size: 2rem !important; } }
 #hamburgerIcon {
   width: 60px;
   height: 20px;
@@ -162,47 +169,33 @@ h6 {
   width: 0%;
   left: 50%; }
 
-#scrollDown a {
-  padding-top: 60px; }
-
-#scrollDown a span {
-  background: #f1d9cd;
-  position: absolute;
-  left: 50%;
-  width: 46px;
-  height: 46px;
-  margin-left: -23px;
-  border: 1px solid #191b1d;
-  border-radius: 100%;
-  box-sizing: border-box; }
-  #scrollDown a span:hover {
-    background: #191b1d;
-    border-color: #f1d9cd; }
-  #scrollDown a span:hover::after {
-    background: #191b1d;
-    border-color: #f1d9cd; }
-
-#scrollDown a span::after {
-  background: #f1d9cd;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  content: '';
-  width: 16px;
-  height: 16px;
-  margin: -12px 0 0 -8px;
-  border-left: 1px solid #191b1d;
-  border-bottom: 1px solid #191b1d;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  box-sizing: border-box; }
-  #scrollDown a span::after:hover {
-    background: #191b1d;
-    border-color: #f1d9cd; }
-
 @media (min-width: 768px) {
   #hamburgerIcon {
     display: none; } }
+@media (max-width: 365px) {
+  #hamburgerIcon {
+    bottom: 50%; } }
+#about .aboutText {
+  margin-top: 30px;
+  text-align: left;
+  margin-left: 21px;
+  margin-right: 20px; }
+#about img {
+  text-align: left;
+  display: block;
+  margin-top: 30px;
+  margin-left: 21px;
+  width: 55%;
+  max-width: 260px; }
+#about a {
+  margin-right: 100%;
+  margin-top: 7px;
+  margin-left: 21px; }
+#about .lastButton {
+  margin-bottom: 20px; }
+#about .bandDivider {
+  border-color: #f1d9cd; }
+
 #news {
   min-height: 100vh; }
   #news .juicerWrapper {
@@ -211,35 +204,45 @@ h6 {
     margin-right: 20px; }
 
 #header {
-  z-index: 1;
-  background: url(../../../img/header_image.jpg) no-repeat fixed center center;
-  background-size: cover;
-  height: 100vh; }
+  height: 100vh;
+  min-height: 446px; }
   #header .headerContent {
-    z-index: 2;
     margin: 0 auto;
     top: 25%;
     position: relative;
     width: 100%;
     display: inline-block;
-    text-align: center; }
+    text-align: center;
+    max-height: 100vh; }
     #header .headerContent h1 {
       font-size: 3.0rem;
       color: white;
       display: none;
       font-family: 'Shadows Into Light', cursive; }
-    #header .headerContent .album {
-      margin-top: 90px;
-      height: 300px; }
-      #header .headerContent .album img {
-        max-height: 300px;
-        max-width: 300px;
-        -webkit-box-shadow: 10px 10px 71px 0px rgba(0, 0, 0, 0.55);
-        -moz-box-shadow: 10px 10px 71px 0px rgba(0, 0, 0, 0.55);
-        box-shadow: 10px 10px 71px 0px rgba(0, 0, 0, 0.55); }
-    #header .headerContent .orderButton {
-      width: 300px;
-      margin-top: 0; }
+    #header .headerContent .albumContainer {
+      margin-top: 100px;
+      margin-bottom: 90px; }
+      #header .headerContent .albumContainer .albumWrapper {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 40vh; }
+        #header .headerContent .albumContainer .albumWrapper .album {
+          height: 40vh;
+          width: 40vh;
+          background: red;
+          overflow: hidden; }
+        #header .headerContent .albumContainer .albumWrapper a {
+          background-color: #f1d9cd;
+          border: none;
+          color: #191b1d;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block; }
+          #header .headerContent .albumContainer .albumWrapper a:hover {
+            color: #f1d9cd;
+            background: #191b1d; }
 
 h1.referral {
   display: none !important; }
@@ -253,13 +256,30 @@ li.juicer {
 @media (max-width: 1171px) {
   #juicerFull {
     display: none; } }
+#sound h2 {
+  margin-top: 30px;
+  text-align: left;
+  margin-left: 21px; }
+#sound p {
+  margin-top: 10px;
+  text-align: left;
+  margin-left: 21px; }
+#sound a {
+  margin-top: 15px;
+  display: block;
+  text-align: center; }
+#sound .soundcloudMobile {
+  margin-top: 30px; }
+
 body {
   box-sizing: border-box;
   max-width: 100%;
   overflow-x: hidden;
   height: 100vh;
   width: 100vw;
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  min-width: 300px;
+  min-height: 300px; }
 
 .section {
   min-height: 100vh;
@@ -281,18 +301,25 @@ body {
     color: #f1d9cd; }
 
 .button {
-  margin-top: 70px;
-  background-color: #f1d9cd;
-  color: #191b1d;
   border: none;
   padding: 15px 32px;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 1.1rem; }
-  .button:hover {
-    color: #f1d9cd;
-    background: #191b1d; }
+  font-size: 1.1rem;
+  display: inline-block; }
+
+.buttonLight {
+  background-color: #f1d9cd;
+  color: #191b1d; }
+  .buttonLight:hover {
+    background-color: #191b1d;
+    color: #f1d9cd; }
+
+.buttonDark {
+  background-color: #191b1d;
+  color: #f1d9cd !important; }
+  .buttonDark:hover {
+    background-color: #f1d9cd;
+    color: #191b1d !important; }
 
 .light-section {
   color: #191b1d;
@@ -301,6 +328,14 @@ body {
 .dark-section {
   color: #f1d9cd;
   background: url(../img/dark_section.jpg) no-repeat fixed center center; }
+
+.album {
+  background: url(../img/album_cover.jpg) no-repeat fixed center center;
+  height: 30%;
+  width: 30%;
+  background-size: cover;
+  margin: 0;
+  padding: 0; }
 
 #header {
   background: url(../img/header_image.jpg) no-repeat fixed center center;

@@ -1,45 +1,54 @@
 @import "../variables";
 
-
 #header {
-  z-index: 1;
-  background: url(../../../img/header_image.jpg) no-repeat fixed center center;
-  background-size: cover;
+  // background set in styles.scss
   height: 100vh;
+  min-height: 446px;
   .headerContent {
-    z-index: 2;
     margin: 0 auto;
     top: 25%;
     position: relative;
     width: 100%;
     display: inline-block;
     text-align: center;
-
+    max-height: 100vh;
     h1 {
       font-size: 3.0rem;
       color: white;
       display: none;
       font-family: 'Shadows Into Light', cursive;
     }
+    .albumContainer {
+      margin-top: 100px;
+      margin-bottom: 90px;
+      .albumWrapper {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 40vh;
+        .album {
+          height: 40vh;
+          width: 40vh;
+          background: red;
+          overflow: hidden;
+        }
+        a {
+          background-color: $lightColor;
+          border: none;
+          color: $darkColor;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+      &:hover {
+        color: $lightColor;
+        background: $darkColor;
+      }
+        }
 
-    .album {
-      margin-top: 90px;
-      height: 300px;
-
-      img {
-        max-height: 300px;
-        max-width: 300px;
-        -webkit-box-shadow: 10px 10px 71px 0px rgba(0,0,0,0.55);
-        -moz-box-shadow: 10px 10px 71px 0px rgba(0,0,0,0.55);
-        box-shadow: 10px 10px 71px 0px rgba(0,0,0,0.55);
       }
     }
-
-    .orderButton {
-      width: 300px;
-      margin-top: 0;
-
-    }
-
   }
 }
+
+
