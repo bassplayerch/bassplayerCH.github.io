@@ -276,6 +276,9 @@ li.juicer {
 #sound .soundcloudMobile {
   margin-top: 30px; }
 
+#galerie .youtubeThumbail {
+  width: 100%; }
+
 body {
   box-sizing: border-box;
   max-width: 100%;
