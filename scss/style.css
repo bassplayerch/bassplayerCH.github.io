@@ -108,7 +108,6 @@ p {
 #hamburgerIcon {
   width: 60px;
   height: 20px;
-  position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -117,7 +116,13 @@ p {
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  cursor: pointer; }
+  cursor: pointer;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
 
 #hamburgerIcon span {
   display: block;
@@ -174,7 +179,7 @@ p {
     display: none; } }
 @media (max-width: 365px) {
   #hamburgerIcon {
-    bottom: 50%; } }
+    margin-top: 0.9rem !important; } }
 #about .aboutText {
   margin-top: 30px;
   text-align: left;
