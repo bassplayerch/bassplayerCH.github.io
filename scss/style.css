@@ -283,6 +283,12 @@ li.juicer {
   margin-top: 20px; }
 #galerie hr {
   border-color: #f1d9cd; }
+#galerie .fotos {
+  margin-bottom: 40px; }
+
+#contact {
+  background: white;
+  height: 60vh; }
 
 body {
   box-sizing: border-box;
@@ -353,5 +359,24 @@ body {
 #header {
   background: url(../img/header_image.jpg) no-repeat fixed center center;
   background-size: cover; }
+
+#parallax {
+  background: url(../img/BelleAndBass_17.jpg) no-repeat fixed center center;
+  background-size: cover;
+  height: 250px;
+  width: 100vw; }
+
+footer {
+  width: 100vw;
+  height: 70px;
+  background: #191b1d;
+  color: #f1d9cd; }
+  footer h6 {
+    line-height: 70px;
+    margin-left: 21px; }
+
+@media (min-width: 768px) {
+  #parallax {
+    height: 400px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -9,6 +9,7 @@
 @import "partials/sections/juicer";
 @import "partials/sections/sound";
 @import "partials/sections/galerie";
+@import "partials/sections/contact";
 
 
 body {
@@ -101,6 +102,31 @@ body {
   background: url(../img/header_image.jpg) no-repeat fixed center center;
   background-size: cover;
 }
+
+#parallax {
+  background: url(../img/BelleAndBass_17.jpg) no-repeat fixed center center;
+  background-size: cover;
+  height: 250px;
+  width: 100vw;
+
+}
+
+
+footer {
+  width: 100vw;
+  height: 70px;
+  background: $darkColor;
+  color: $lightColor;
+  h6 {
+    line-height: 70px;
+    margin-left: $marginLeft;
+  }
+}
+
+
 @media(min-width: 768px) {
+  #parallax {
+    height: 400px;
+  }
 
 }
