@@ -278,8 +278,11 @@ li.juicer {
 
 #galerie .youtubeThumbail {
   width: 90vw;
-  margin-left: 21px;
-  margin-right: 21px; }
+  margin: 20px 21px 10px; }
+#galerie h2 {
+  margin-top: 20px; }
+#galerie hr {
+  border-color: #f1d9cd; }
 
 body {
   box-sizing: border-box;

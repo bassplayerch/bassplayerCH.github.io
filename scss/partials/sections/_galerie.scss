@@ -3,7 +3,12 @@
 #galerie {
   .youtubeThumbail {
     width: 90vw;
-    margin-left: $marginLeft;
-    margin-right: $marginLeft;
+    margin: 20px $marginLeft 10px;
+  }
+  h2{
+  margin-top: 20px;
+  }
+  hr {
+    border-color: $lightColor;
   }
 }
