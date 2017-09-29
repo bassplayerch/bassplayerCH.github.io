@@ -1,5 +1,9 @@
+@import "../variables";
+
 #galerie {
   .youtubeThumbail {
-    width: 100%;
+    width: 90vw;
+    margin-left: $marginLeft;
+    margin-right: $marginLeft;
   }
 }
