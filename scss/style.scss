@@ -1,0 +1,38 @@
+@import "partials/normalize";
+@import "partials/variables";
+@import "partials/header";
+@import "partials/juicer";
+@import "partials/section";
+@import "partials/hamburgerIcon";
+@import "partials/news";
+@import "partials/about";
+@import "partials/sound";
+
+.button {
+  text-decoration: none;
+  padding: 1.1rem;
+  -webkit-box-shadow: -1px 0px 45px 21px rgba(0,0,0,0.09);
+  -moz-box-shadow: -1px 0px 45px 21px rgba(0,0,0,0.09);
+  box-shadow: -1px 0px 45px 21px rgba(0,0,0,0.09);
+}
+.buttonDark {
+  background: $darkColor;
+  color: $lightColor;
+  &:hover {
+    background: $lightColor;
+    color: $darkColor;
+  }
+}
+.buttonLight {
+  background: $lightColor;
+  color: $darkColor;
+  &:hover {
+    background: $darkColor;
+    color: $lightColor;
+  }
+}
+
+
+@media(min-width: 768px) {
+
+}

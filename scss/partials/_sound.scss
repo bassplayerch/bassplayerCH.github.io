@@ -1,0 +1,27 @@
+@import "variables";
+
+#sound {
+
+  .sectionTitle {
+    margin-bottom: $marginTop;
+  }
+  p {
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    margin-bottom: 2.1rem;
+  }
+
+  a.button{
+    display: block;
+    margin: $marginTop 0.4rem;
+
+  }
+
+  .soundcloudMobile {
+    margin-top: $marginTop;
+  }
+}
+
+@media(min-width: 768px) {
+
+}

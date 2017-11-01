@@ -1,0 +1,36 @@
+@import "variables";
+
+.section {
+  min-height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+
+  .sectionTitle{
+    font-size: 2.4rem;
+    border: 5px solid;
+    margin-top: $marginTop;
+    padding: 0.9rem;
+    text-align: center;
+    display: inline-block;
+
+  }
+}
+
+.sectionLight {
+  color: $darkColor;
+  background: url($lightBackgroundImg) no-repeat center center fixed;
+
+}
+
+.sectionDark {
+  color: $lightColor;
+  background: url($darkBackgroundImg) no-repeat center center fixed;
+
+}
+
+@media(min-width: 768px) {
+
+}

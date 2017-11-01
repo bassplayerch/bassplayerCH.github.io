@@ -1,0 +1,67 @@
+@import "variables";
+
+$paddingLeft: 0.5rem;
+
+header {
+  background: url($headerImg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  .titleBar {
+    display: flex;
+    padding-top: 1.3rem;
+    padding-bottom: 0.8rem;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: $paddingLeft;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    font-size: 1.7rem;
+    width: 80%;
+  }
+  #hamburgerIcon {
+    flex: 1;
+  }
+  hr {
+    margin: 0;
+    padding: 0;
+    border: solid $lightColor 1px;
+  }
+  nav {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    background: $darkColor;
+    color: $lightColor;
+    ul {
+      display:none;
+      flex-direction: column;
+      li {
+        padding-left: $paddingLeft;
+        padding-top: 0.8rem;
+        font-size: 1.3rem;
+        padding-bottom: 0.8rem;
+
+        &:hover{
+          background: $lightColor;
+          color: $darkColor;
+        }
+        a {
+        }
+
+      }
+    }
+  }
+}
+
+.sideBarOpen {
+  display: flex;
+}
+
+@media(min-width: 768px) {
+
+}
