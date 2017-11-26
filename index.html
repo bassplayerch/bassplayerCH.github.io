@@ -7,14 +7,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="scss/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
-    <script src="../../WEBSITES/belleandbass/js/script.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>    <script src="galleria/galleria-1.5.7.min.js"></script>
+    <script src="https://use.fontawesome.com/0cce33c023.js"></script>
 </head>
 
 <body>
 <header>
-    <nav>
+    <nav id="navbar">
         <div class="titleBar">
             <h1>belle and bass</h1>
             <div id="hamburgerIcon">
@@ -24,15 +26,37 @@
                 <span></span>
             </div>
         </div>
-        <ul>
-            <hr>
-            <li><a href="#"></a>NEWS</li>
-            <li><a href="#"></a>ÜBER UNS</li>
-            <li><a href="#"></a>DEMOS/AGENDA</li>
-            <li><a href="#"></a>GALERIE</li>
-            <li><a href="#"></a>KONTAKT</li>
-        </ul>
+        <div class="menuLinks">
+            <p class="title">BELLE AND BASS</p>
+            <a class="scrollButton closeMenu" href="#news">
+                NEWS
+            </a>
+            <a class="scrollButton closeMenu" href="#about">
+                ÜBER UNS
+            </a>
+            <a class="scrollButton closeMenu" href="#sound">
+                SOUND
+            </a>
+            <a class="scrollButton closeMenu" href="#galerie">
+                GALERIE
+            </a>
+            <a class="scrollButton closeMenu" href="#agenda">
+                KONZERTE
+            </a>
+            <a class="scrollButton closeMenu" href="#contact">
+                KONTAKT
+            </a>
+        </div>
     </nav>
+
+    <article class="album">
+        <div class="albumCover"></div>
+        <a href="#contact" class="orderButton button buttonDark">ORDER NOW</a>
+        <div class="scrollButton newsButton">
+            <a href="#news"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a>
+        </div>
+
+    </article>
 </header>
 
 <section id="news" class="section sectionLight">
@@ -49,47 +73,178 @@
 
 <section id="about" class="section sectionDark">
     <h1 class="sectionTitle">ÜBER UNS</h1>
-    <p class="aboutText">“Kleine Besetzung, grosse Wirkung” – Das ist das Motto des engagierten Musikerduo Belle and
+    <img src="img/logo_medium.jpg" alt="belle and bass logo">
+    <p class="aboutText bandText">“Kleine Besetzung, grosse Wirkung” – Das ist das Motto des engagierten Musikerduo
+        Belle and
         Bass.
         Minimalistisch und doch klangvoll spielen die beiden Musiker Eigenkompositionen und Klassiker des Jazz- und
         Popbereichs. Die einzigartige Kombination von Gesang und Bass verschafft jedem Song eine besondere Note, die
         für sinnliche und feierliche Anlässe geeignet ist.</p>
-    <img src="img/stefan.jpg" alt="stefan guggisberg / ebass">
-    <p class="aboutText">Stefan Guggisberg, spielte schon in mehreren Formationen verschiedener Stilrichtungen und
-        zeigt durch seine
-        künstlerlische Vielfalt, dass der Bass nicht nur ein eintöniges Saiteninstrument ist.</p>
-    <a class="button buttonDark" href="http://www.bassplayer.ch">www.bassplayer.ch</a>
     <hr>
-    <img src="img/kira.jpg" alt="stefan guggisberg / ebass">
-    <p class="aboutText">Die vielseitig interessierte Sängerin und Komponistin, Kira Stahel, sammelte bisher viel
-        Erfahrung in verschiedenen Gesangsbereichen wie Jazz, Pop, dem indischen oder bulgarischen Gesang. Seit 2014
-        studiert sie an der Hochschule Luzern im Institut Musik, wo sie von Neuem inspiriert wird.</p>
-    <a class="button buttonDark" href="http://www.kirastahel.ch">www.kirastahel.ch</a>
+    <div class="aboutWrapper stefan">
+        <img height="318" src="img/stefan.jpg" alt="stefan guggisberg / ebass">
+        <p class="aboutText">Stefan Guggisberg, spielte schon in mehreren Formationen verschiedener Stilrichtungen und
+            zeigt durch seine
+            künstlerlische Vielfalt, dass der Bass nicht nur ein eintöniges Saiteninstrument ist. <a
+                    class="button buttonDark aboutButtonInline" href="http://www.bassplayer.ch">www.bassplayer.ch</a>
+        </p>
+        <a class="button buttonDark aboutButton" href="http://www.bassplayer.ch">www.bassplayer.ch</a>
+        <hr>
+        <img height="318" src="img/kira.jpg" alt="kira stahel / gesang">
+        <p class="aboutText">Die vielseitig interessierte Sängerin und Komponistin, Kira Stahel, sammelte bisher viel
+            Erfahrung in verschiedenen Gesangsbereichen wie Jazz, Pop, dem indischen oder bulgarischen Gesang. Seit 2014
+            studiert sie an der Hochschule Luzern im Institut Musik, wo sie von Neuem inspiriert wird. <a
+                    class="button buttonDark aboutButtonInline" href="http://www.kirastahel.ch">www.kirastahel.ch</a>
+        </p>
+        <a class="button buttonDark aboutButton" href="http://www.kirastahel.ch">www.kirastahel.ch</a>
+    </div>
 </section>
 
 <section id="sound" class="section sectionLight">
     <h1 class="sectionTitle">SOUND</h1>
-    <h2>On and On Again</h2>
-    <p>Nach fast einem Jahr Arbeit und einer erfolgreichen Crowdfunding Kampaggne konnten wir endlich unser erstes Album
-        releasen. Das Album könnt ihr entweder direkt bei uns bestellen (Physikalisch 20.- inkl. Versand / Download
-        17.-) oder bei allen grossen Online Musikstores kaufen. </p>
-    <a class="button buttonDark" href="album.html">ORDER NOW</a>
-    <div class="soundcloudMobile">
-        <iframe width="100%" height="400" scrolling="no" frameborder="no"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/356076273&amp;color=%23f1d9cd&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+    <div class="soundWrapper">
+        <div class="card">
+            <img src="img/album_cover_small.jpg" alt="Album Cover - On and On Again by Belle and Bass">
+            <h2>On and On Again</h2>
+            <p>Nach fast einem Jahr Arbeit und einer erfolgreichen Crowdfunding Kampaggne konnten wir endlich unser
+                erstes
+                Albumgit pu
+                releasen. Das Album könnt ihr entweder direkt bei uns bestellen (Physikalisch 20.- inkl. Versand /
+                Download
+                17.-) oder bei allen grossen Online Musikstores kaufen. </p>
+            <a class="button buttonDark" href="#contact">ORDER NOW</a>
+        </div>
+        <div class="soundcloudMobile">
+            <iframe width="100%" height="450" scrolling="no" frameborder="no"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/356076273&amp;color=%23f1d9cd&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+        </div>
     </div>
-
 </section>
 <section id="galerie" class="section sectionDark">
     <h1 class="sectionTitle">GALERIE</h1>
+    <div class="galeriaWrapper">
+        <div class="galleria">
+            <a href="https://www.youtube.com/watch?v=FGaezSFuB7Q"><img src="img/galerie/yt_brighter.jpg"></a>
+            <a href="https://www.youtube.com/watch?v=W45j2TSVZSE"><img src="img/galerie/yt_save.jpg"></a>
+            <img src="img/galerie/1.jpg">
+            <img src="img/galerie/2.jpg">
+            <img src="img/galerie/3.jpg">
+            <img src="img/galerie/5.jpg">
+            <img src="img/galerie/6.jpg">
+            <img src="img/galerie/7.jpg">
+        </div>
+    </div>
+    <p>Wir sind auch auf Youtube unterwegs. Viele weitere Videos finden Sie auf unserem offiziellem Youtube
+        Channel: </p>
+    <a href="https://www.youtube.com/channel/UCYGwO5STNHpf0kGgk1EvBPQ"><i
+            class="youtubeIcon fa fa-youtube-play faIcon" aria-hidden="true"></i></a>
+    <script>
+        (function () {
+            Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+            Galleria.configure({
+                lightbox: true,
+                swipe: false
+            });
+            Galleria.run('.galleria');
+        }());
+    </script>
 </section>
-<section id="contact" class="section">
+
+
+<section id="agenda" class="section sectionLight">
+    <h1 class="sectionTitle">Konzerte</h1>
+    <p class="concertText">booking text.... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim hic magnam
+        odio quia sunt. Aliquam dolore ipsam ipsum neque odit. Animi beatae, blanditiis consequatur dicta ea earum eum
+        explicabo fuga illum iure nam obcaecati omnis possimus recusandae repellendus sed similique, sint temporibus ut
+        voluptate. Ab aut deserunt nesciunt reiciendis temporibus.</p>
+    <div class="tableContainer">
+        <table>
+            <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Name</th>
+                <th>Ort</th>
+                <th>Land</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>16.01.2018</td>
+                <td><a href="http://kulturkoller.ch/">Kulturkoller Winterthur</a></td>
+                <td>Winterthur</td>
+                <td>Schweiz</td>
+            </tr>
+            <tr>
+                <td>16.01.2018</td>
+                <td><a href="http://kulturkoller.ch/">Kulturkoller Winterthur</a></td>
+                <td>Winterthur</td>
+                <td>Schweiz</td>
+            </tr>
+            <tr>
+                <td>16.01.2018</td>
+                <td><a href="http://kulturkoller.ch/">Kulturkoller Winterthur</a></td>
+                <td>Winterthur</td>
+                <td>Schweiz</td>
+            </tr>
+            <tr>
+                <td>16.01.2018</td>
+                <td><a href="http://kulturkoller.ch/">Kulturkoller Winterthur</a></td>
+                <td>Winterthur</td>
+                <td>Schweiz</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<div class="divider"></div>
+<section id="contact">
     <h1 class="sectionTitle">KONTAKT</h1>
+    <p>KOntakttext Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi eos explicabo molestias
+        perferendis quasi sit? Consequuntur, provident, quasi. Quidem, repudiandae.</p>
+    <div class="container form">
+        <form action="https://getsimpleform.com/messages?form_api_token=7c9b681c133596dcd0c44653b3e40e9e"
+              method="post">
+            <div class="form-group">
+                <div class="form-group">
+                    <input name='name' id="name" type="text" required="required"/>
+                    <label class="control-label" for="name">Name</label><i class="bar"></i>
+                </div>
+                <div class="form-group">
+                    <input name='email' id="email" type="email" required="required"/>
+                    <label class="control-label" for="email">Email</label><i class="bar"></i>
+                </div>
+                <div class="form-group">
+                    <textarea name='message' id="message" required="required"></textarea>
+                    <label class="control-label" for="message">Ihre Nachricht</label><i class="bar"></i>
+                </div>
+                <!--<div class="button-container">-->
+                    <input class="button" type='submit' value='Absenden'/>
+                <!--</div>-->
+            </div>
+        </form>
+        <div>
+
+        </div>
+    </div>
 </section>
+
 <footer>
-
+    <div>
+        <a href="https://www.youtube.com/channel/UCYGwO5STNHpf0kGgk1EvBPQ"><i
+                class="youtubeIcon fa fa-youtube-play faIcon" aria-hidden="true"></i></a>
+    </div>
+    <div><a href="https://soundcloud.com/belle-and-bass">
+        <i class="fa fa-soundcloud faIcon" aria-hidden="true"></i></a></div>
+    <div><a href="https://www.facebook.com/belleandbass/">
+        <i class="fa fa-facebook-official faIcon" aria-hidden="true"></i></a></div>
+    <div><a href="https://open.spotify.com/artist/40cHFgIq5ZYQZgmNyzaHJb">
+        <i class="fa fa-spotify faIcon" aria-hidden="true"></i></a></div>
+    <div><p>&copy; 2017 Belle and Bass</p></div>
 </footer>
-
 <script src="js/main.js" type="application/javascript"></script>
 </body>
+<script type="text/javascript">
+    smooth_scroll.init({});
+</script>
+
 </html>

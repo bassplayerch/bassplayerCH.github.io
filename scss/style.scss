@@ -7,14 +7,29 @@
 @import "partials/news";
 @import "partials/about";
 @import "partials/sound";
+@import "partials/galerie";
+@import "partials/agenda";
+@import "partials/contact";
+@import "partials/form";
+@import "partials/footer";
+
 
 .button {
   text-decoration: none;
   padding: 1.1rem;
-  -webkit-box-shadow: -1px 0px 45px 21px rgba(0,0,0,0.09);
-  -moz-box-shadow: -1px 0px 45px 21px rgba(0,0,0,0.09);
-  box-shadow: -1px 0px 45px 21px rgba(0,0,0,0.09);
+  -webkit-box-shadow: -1px 0px 45px 21px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: -1px 0px 45px 21px rgba(0, 0, 0, 0.09);
+  box-shadow: -1px 0px 45px 21px rgba(0, 0, 0, 0.09);
 }
+.faIcon {
+  font-size: 3rem !important;
+  color:$lightColor;
+  margin-bottom: $marginTop;
+  &:visited {
+    color:$lightColor;
+  }
+}
+
 .buttonDark {
   background: $darkColor;
   color: $lightColor;
@@ -22,6 +37,19 @@
     background: $lightColor;
     color: $darkColor;
   }
+}
+
+.galleria {
+  max-width: 100vw !important;
+  height: 400px;
+}
+
+.galleria-lightbox-content {
+  background: #000000 !important;
+}
+
+.galleria-container{
+  background: rgba(0, 0, 0, 0.0) !important;
 }
 .buttonLight {
   background: $lightColor;
@@ -31,6 +59,17 @@
     color: $lightColor;
   }
 }
+
+
+.divider {
+  background: url(../img/BelleAndBass_17.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 30vh;
+}
+
 
 
 @media(min-width: 768px) {

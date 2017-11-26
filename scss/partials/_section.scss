@@ -2,10 +2,6 @@
 
 .section {
   min-height: 100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   text-align: center;
 
   .sectionTitle{
@@ -15,19 +11,32 @@
     padding: 0.9rem;
     text-align: center;
     display: inline-block;
+    text-transform: uppercase;
 
   }
 }
 
 .sectionLight {
   color: $darkColor;
-  background: url($lightBackgroundImg) no-repeat center center fixed;
+  background: url($lightBackgroundImg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+
 
 }
 
 .sectionDark {
   color: $lightColor;
-  background: url($darkBackgroundImg) no-repeat center center fixed;
+  background: url($darkBackgroundImg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+
 
 }
 
