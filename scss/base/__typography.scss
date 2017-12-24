@@ -1,0 +1,22 @@
+body {
+    font-family: 'Quattrocento Sans', sans-serif;    
+    font-size: 1.6rem;
+    line-height: 1.5;    
+}
+
+.section-title{
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    &:hover {
+        transform: skewY(2deg) skewX(1deg) scale(1.1);
+        text-shadow: .5rem 1rem 1rem rgba($color-black, .2);
+    }
+}
+
+.paragraph {
+    
+}

@@ -1,0 +1,214 @@
+/* RGB */
+@-webkit-keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.section-title {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: .2rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.section-title:hover {
+  -webkit-transform: skewY(2deg) skewX(1deg) scale(1.1);
+          transform: skewY(2deg) skewX(1deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-padding-top-small {
+  padding-top: 2rem;
+}
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover::after {
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+          transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn:active, .btn:focus {
+  outline: none;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn--white::after {
+  background-color: #fff;
+}
+
+.btn--primary {
+  background-color: #BB2F3D;
+  color: #fff;
+}
+
+.btn--primary::after {
+  background-color: #BB2F3D;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.btn--animated {
+  -webkit-animation: moveInBottom .5s ease-out .75s;
+          animation: moveInBottom .5s ease-out .75s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.hamburger-icon {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 4%;
+  left: calc(((100vw - 87%) /2));
+}
+
+.hamburger-icon__line {
+  width: 4rem;
+  display: block;
+  height: 6px;
+  background-color: #000;
+  margin: 8px 0;
+}
+
+.hamburger-icon__line:first-child {
+  margin-top: 0;
+}
+
+.hamburger-icon__line:last-child {
+  margin-bottom: 0;
+}
+
+.header {
+  background: url("../img/mobile_background.jpg") no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+  position: relative;
+}
+
+.header .text-logo {
+  width: 87%;
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0;
+  margin: 0;
+}
+
+.header .btn-container {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main::before {
+  content: ' ';
+  display: block;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(200, 200, 200, 0.9))), url("../img/mobile_background_section.jpg");
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(200, 200, 200, 0.9)), url("../img/mobile_background_section.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: -10;
+}
+/*# sourceMappingURL=style.css.map */
