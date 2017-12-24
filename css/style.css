@@ -1,4 +1,3 @@
-/* RGB */
 @-webkit-keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -11,6 +10,7 @@
             transform: translate(0);
   }
 }
+
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -122,6 +122,42 @@ body {
   background-color: #BB2F3D;
 }
 
+.btn--primary-dark {
+  background-color: #721121;
+  color: #fff;
+}
+
+.btn--primary-dark::after {
+  background-color: #721121;
+}
+
+.btn--primary-light {
+  background-color: #f15156;
+  color: #fff;
+}
+
+.btn--primary-light::after {
+  background-color: #f15156;
+}
+
+.btn--secondary {
+  background-color: #ffc07f;
+  color: #000;
+}
+
+.btn--secondary::after {
+  background-color: #ffc07f;
+}
+
+.btn--secondary-light {
+  background-color: #ffcf99;
+  color: #000;
+}
+
+.btn--secondary-light::after {
+  background-color: #ffcf99;
+}
+
 .btn::after {
   content: "";
   display: inline-block;
@@ -170,7 +206,7 @@ body {
 .header {
   background: url("../img/mobile_background.jpg") no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   height: 100vh;
   position: relative;
 }
@@ -198,8 +234,8 @@ main::before {
   content: ' ';
   display: block;
   background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(200, 200, 200, 0.9))), url("../img/mobile_background_section.jpg");
-  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(200, 200, 200, 0.9)), url("../img/mobile_background_section.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(244, 244, 244, 0.8))), url("../img/mobile_background_section.jpg");
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(244, 244, 244, 0.8)), url("../img/mobile_background_section.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh;
