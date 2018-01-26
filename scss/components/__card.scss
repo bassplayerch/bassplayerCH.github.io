@@ -1,12 +1,13 @@
 .card {
+
+    // FUNCTIONALITY
     perspective: 150rem;
     -moz-perspective: 150rem;
-    position: relative;
     height: 52rem;
     
     &__side {
         height: 52rem;
-        transition: all .8s ease;
+        transition: all .6s ease;
         position: absolute;
         top: 0;
         left: 0;
@@ -15,28 +16,64 @@
         border-radius: 3px;
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        text-align: center;
+        
 
         &--front {
+            position: relative;
             background-color: $color-white;
+            &--1 {
+                background: url("../img/mobile_background.jpg") no-repeat center center;
+                background-size: cover;
+            }
+            &--2 {
+                background: url("../img/test.jpg") no-repeat center center;
+                background-size: cover;
+            }
+    
         }
 
         &--back {
             transform: rotateY(180deg);
-            background: red;
-
+            background: white;
+            .paragraph {
+                padding: 3rem;
+            }
         }
     }
-  
 
-    &:hover &__side--front {
+    &__content {
+    }
+
+    &__heading {
+        font-size: 5rem;
+    }
+    &__subheading {
+        color: $color-grey-dark;
+        font-size: 2rem;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        &:hover,
+        &:active {
+            transform: translateX(-50%);
+        }
+    
+
+    }
+
+
+    .active &__side--front {
         transform: rotateY(-180deg);
     }
 
-    &:hover &__side--back {
+    .active &__side--back {
         transform: rotateY(0);
     }
-
-
 
 
 

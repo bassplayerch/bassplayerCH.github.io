@@ -1,3 +1,14 @@
-.section-about{
-    
+.section-about {
+    .swiper-button-prev,
+    .swiper-button-next {
+        opacity: .7;
+        z-index: 99;
+    }
+    .swiper-button-next {
+        margin-right: -1rem;
+    }
+}
+
+.swiper-button-prev {
+    margin-left: -1rem;
 }
