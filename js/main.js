@@ -10,3 +10,16 @@ var closeMenu = function () {
 navigationLinks.forEach(function (button) {
     button.addEventListener('click', closeMenu)
 });
+
+function scrollTo(element) {
+    window.scroll({
+      behavior: 'smooth',
+      left: 0,
+      top: element.offsetTop
+    });
+  }
+
+var welcomeButton = document.querySelector('.btn-container a');
+welcomeButton.addEventListener('click', function(){
+    scrollTo(document.getElementById('about'));
+});

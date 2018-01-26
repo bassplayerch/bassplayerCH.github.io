@@ -10,7 +10,9 @@ body {
     font-weight: 400;
     letter-spacing: .2rem;
     transition: all .2s;
-
+    &::first-letter {
+        color: $color-primary;
+    }
     &:hover {
         transform: scale(1.1);
         text-shadow: .5rem 1rem 1rem rgba($color-black, .2);
