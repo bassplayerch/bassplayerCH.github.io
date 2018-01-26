@@ -19,3 +19,7 @@ main::before {
     width: 90vw;
     margin: 0 auto;
 }
+
+.wa-mediabox-overlay.opened{
+    z-index: 9999;
+}
