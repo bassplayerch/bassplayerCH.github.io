@@ -4,11 +4,11 @@
     }
     &__button {
         background-color: $color-white;
-        height: 7rem;
-        width: 7rem;
+        height: 6.6rem;
+        width: 6.6rem;
         position: fixed;
-        top: 4rem;
-        right: 4rem;
+        top: 1rem;
+        right: 1rem;
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
@@ -16,12 +16,12 @@
         cursor: pointer;
     }
     &__background {
-        height: 6rem;
-        width: 6rem;
+        height: 5rem;
+        width: 5rem;
         border-radius: 50%;
         position: fixed;
-        right: 4.5rem;
-        top: 4.5rem;
+        right: 1.5rem;
+        top: 1.5rem;
         background-image: radial-gradient($color-primary, $color-primary-dark);
         z-index: 1000;
         transition: all .5s cubic-bezier(0.4, 0.135, 0.15, 0.86);
@@ -39,34 +39,41 @@
     &__list {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 70%;
         width: 100%;
         transform: translate(-50%, -50%);
         list-style: none;
-        text-align: center;
+        text-align: left;
     }
     &__item {
-        margin: 1.8rem;
+        margin: 1.2rem;
     }
     &__link {
         &:link,
         &:visited {
             display: inline-block;
             text-decoration: none;
-            font-size: 3rem;
+            font-size: 4rem;
+            text-align: left;
             font-weight: 300;
-            color: $color-white;
+            color: $color-grey-dark;
             text-transform: uppercase;
             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
             background-size: 220%;
             transition: all .4s;
             padding: 1rem 2rem;
         }
+        &::first-letter {
+            color: $color-white;
+        }
         &:hover,
         &:active {
             background-position: 100%;
-            color: $color-primary;
+            color: $color-grey-dark;
             transform: translateX(1rem);
+            &::first-letter {
+                color: $color-primary;
+            }
         }
     }
     &__checkbox:checked~&__background {
@@ -101,26 +108,20 @@
             top: .8rem;
         }
     }
-
-    &__button:hover &__icon::before{
+    &__button:hover &__icon::before {
         top: -1rem;
     }
-    &__button:hover &__icon::after{
+    &__button:hover &__icon::after {
         top: 1rem;
     }
-
-    &__checkbox:checked + &__button &__icon {
+    &__checkbox:checked+&__button &__icon {
         background-color: transparent;
     }
-
-    
-    &__checkbox:checked + &__button &__icon::before {
+    &__checkbox:checked+&__button &__icon::before {
         top: 0;
         transform: rotate(135deg);
     }
-
-    
-    &__checkbox:checked + &__button &__icon::after {
+    &__checkbox:checked+&__button &__icon::after {
         top: 0;
         transform: rotate(-135deg);
     }
