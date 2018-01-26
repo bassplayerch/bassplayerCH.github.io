@@ -32,12 +32,10 @@ ready(function () {
             modifier: 1,
             slideShadows: true,
         },
-        // Optional parameters
         direction: 'horizontal',
         loop: true,
 
 
-        // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -52,6 +50,9 @@ ready(function () {
     var closeMenu = function () {
         if (navigationButton.checked) {
             navigationButton.checked = false;
+            navigationLinks.forEach(function(link){
+                link.classList.add('disabled');
+            });
         }
     }
     navigationLinks.forEach(function (button) {
