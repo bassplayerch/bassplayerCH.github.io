@@ -12,11 +12,10 @@ body {
     transition: all .2s;
 
     &:hover {
-        transform: skewY(2deg) skewX(1deg) scale(1.1);
+        transform: scale(1.1);
         text-shadow: .5rem 1rem 1rem rgba($color-black, .2);
     }
 }
 
 .paragraph {
-    
 }

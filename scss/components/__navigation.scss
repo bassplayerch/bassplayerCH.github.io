@@ -39,14 +39,14 @@
     &__list {
         position: absolute;
         top: 50%;
-        left: 70%;
+        left: 71%;
         width: 100%;
         transform: translate(-50%, -50%);
         list-style: none;
         text-align: left;
     }
     &__item {
-        margin: 1.2rem;
+        margin: .5rem;
     }
     &__link {
         &:link,
