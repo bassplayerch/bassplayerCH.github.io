@@ -1,27 +1,12 @@
 .gallery {
-    &__container {
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-    }
-    &__image {
-        display: block;
+    width: 90vw;
+    position: relative;
+    margin: 0 auto;
+    img {
         max-width: 100%;
-        cursor: pointer;
     }
-    &__icon {
+    &__arrow {
         position: absolute;
-        display: inline-block;
-        color: rgba($color-white, .7);
-        font-size: 6rem;
-        top: 50%;
-        transform: translate(-0, -50%);
-        cursor: pointer;
-        &--left {
-            left: 0px;
-        }
-        &--right {
-            right: 0px;
-        }
+
     }
 }

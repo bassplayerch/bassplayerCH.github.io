@@ -1,3 +1,4 @@
+
 var navigationButton = document.getElementById('navi-toggle');
 
 var navigationLinks = document.querySelectorAll('.navigation__link');
@@ -8,7 +9,6 @@ navigationLinks.forEach(function (button) {
     button.addEventListener('click', closeMenu)
 });
 
-
 //gallery
 var currentImage = 1;
 var totalImages = 5;
@@ -16,16 +16,8 @@ var image = document.querySelectorAll('.gallery__image');
 var container = document.getElementsByClassName('gallery__container')[0];
 var youtubeSection = document.querySelector('.section-youtube');
 var smallImageGallery = document.querySelector('#youtube .gallery__image');
-var popup = document.querySelector('.popup');
 
 
-var openLightBox = function () {
-    popup.classList.add('open');
-}
-
-var closePopup = function() {
-    popup.classList.remove('open');
-}
 
 var changeImage = function () {
     var regex = /[0-9]*.jpg/;
