@@ -14,15 +14,19 @@
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align: center;
         cursor: pointer;
+        animation: moveInRight .5s ease-out .75s;
+        animation-fill-mode: backwards;
     }
     &__background {
-        height: 5rem;
-        width: 5rem;
+        height: 6.6rem;
+        width: 6.6rem;
         border-radius: 50%;
         position: fixed;
-        right: 1.5rem;
-        top: 1.5rem;
+        right: 1rem;
+        top: 1rem;
         background-image: radial-gradient($color-primary, $color-primary-dark);
+        animation: moveInRight .5s ease-out .75s;
+        animation-fill-mode: backwards;
         z-index: 200;
         transition: all .5s cubic-bezier(0.4, 0.135, 0.15, 0.86);
     }
