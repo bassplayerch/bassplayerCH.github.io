@@ -23,11 +23,8 @@ ready(function () {
 
     //smoothScroll
     function scrollTo(element) {
-        window.scroll({
-            behavior: 'smooth',
-            left: 0,
-            top: element.offsetTop
-        });
+        element.scrollIntoView({behavior: "smooth", block: "start"});
+   
     }
 
     // slider
@@ -70,10 +67,6 @@ ready(function () {
         button.addEventListener('click', closeMenu)
     });
 
-    var welcomeButton = document.querySelector('.btn-container a');
-    welcomeButton.addEventListener('click', function () {
-        scrollTo(document.getElementById('about'));
-    });
 
     //scrollupbutton
     var scrollUpButton = document.querySelector('.scroll-up-button');
@@ -129,6 +122,11 @@ ready(function () {
     });
     cardBackButtons.forEach(function (cardButton) {
         cardButton.addEventListener('click', flipBack.bind(cardButton));
+    });
+    var welcomeButton = document.querySelector('.btn-container a.btn');
+    welcomeButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        scrollTo(document.getElementById('about'));
     });
 
 
