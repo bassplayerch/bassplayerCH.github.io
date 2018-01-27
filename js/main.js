@@ -9,6 +9,7 @@ var ready = function (fn) {
 };
 
 ready(function () {
+    var welcomeButton = document.querySelector('.btn-container a.btn');
 
     //debounce
     var debounce = function(func, delay) {
@@ -86,8 +87,11 @@ ready(function () {
             var navBarDesktop = document.querySelector('.desktop-navigation');
            if (window.pageYOffset <= 110){
                navBarDesktop.classList.remove('visible');
+               welcomeButton.classList.remove('visible');
            } else {
             navBarDesktop.classList.add('visible');
+            welcomeButton.classList.add('visible');
+
            }
         }
 
@@ -123,7 +127,6 @@ ready(function () {
     cardBackButtons.forEach(function (cardButton) {
         cardButton.addEventListener('click', flipBack.bind(cardButton));
     });
-    var welcomeButton = document.querySelector('.btn-container a.btn');
     welcomeButton.addEventListener('click', function (e) {
         e.preventDefault();
         scrollTo(document.getElementById('about'));

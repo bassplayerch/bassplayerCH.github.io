@@ -65,6 +65,9 @@
             &::after {
                 background-color: $color-primary;
             }
+            &.visible {
+                display: none;
+            }
         }
     }
 }
