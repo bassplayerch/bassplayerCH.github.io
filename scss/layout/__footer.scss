@@ -1,4 +1,33 @@
 .footer {
-    background: $color-grey-dark;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: $color-grey-dark-2;
+    color: white;
+    padding: 1.2rem;
+    .paragraph {
+        flex: 1;
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+
+    .social-icons-container{
+        display: flex;
+        font-size: 3rem;
+        justify-content: space-around;
+        flex: 2;
+        .social-icon {
+            color: white;
+            text-decoration: none;
+            &:visited {
+                color: white;
+            }
+            &:hover {
+                color: $color-primary;
+            }
+        
+        }
+    
+    }
 
 }
