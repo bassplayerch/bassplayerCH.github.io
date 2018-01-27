@@ -1,3 +1,7 @@
 .section-youtube {
     min-height: 50vh;
+
+    .mobilePrestitial.g-flex-row-centered.g-box-full.m-enabled{
+        display: none !important;
+    }
 }

@@ -10,6 +10,17 @@ var ready = function (fn) {
 
 ready(function () {
 
+    //debounce
+    var debounce = function(func, delay) {
+        var inDebounce
+        return function() {
+          var context = this
+          var args = arguments
+          clearTimeout(inDebounce)
+          inDebounce = setTimeout(() => func.apply(context, args), delay)
+        }
+      }
+
     //smoothScroll
     function scrollTo(element) {
         window.scroll({
@@ -50,7 +61,7 @@ ready(function () {
     var closeMenu = function () {
         if (navigationButton.checked) {
             navigationButton.checked = false;
-            navigationLinks.forEach(function(link){
+            navigationLinks.forEach(function (link) {
                 link.classList.add('disabled');
             });
         }
@@ -63,6 +74,20 @@ ready(function () {
     welcomeButton.addEventListener('click', function () {
         scrollTo(document.getElementById('about'));
     });
+    var scrollUpButton = document.querySelector('.scroll-up-button');
+    scrollUpButton.addEventListener('click', function () {
+        scrollTo(document.getElementById('header'));
+
+    });
+
+    window.addEventListener('scroll', debounce(function() {
+        if (window.pageYOffset <= 110){
+            scrollUpButton.classList.remove('visible');
+        } else {
+            scrollUpButton.classList.add('visible');
+
+        }
+      }, 10));
 
     //cards
     var cardFrontButtons = document.querySelectorAll('.card .card__button--front');
