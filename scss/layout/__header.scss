@@ -29,6 +29,12 @@
             width: 70%;
         }
     }
+    @media screen and (min-width: 630px) {
+        .text-logo {
+            top: 9%;
+            width: 63%;
+        }
+    }
     @media screen and (min-width: 691px) {
         .text-logo {
             top: 3%;
@@ -37,7 +43,7 @@
     @media screen and (min-width: 755px) {
         .text-logo {
             top: 3%;
-            width: 60%
+            width: 57%
         }
     }
     .btn-container {

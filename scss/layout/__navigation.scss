@@ -201,6 +201,26 @@
     }
 }
 
+@media screen and (max-height: 400px) {
+.navigation {
+    &__nav{ 
+
+    }
+
+    &__item {
+       
+    }
+    &__link {
+        font-size: 3.2rem !important;
+        padding: 0 !important;
+    }
+
+
+}
+
+}
+
+
 @media screen and (min-width: 1200px) {
     .desktop-navigation {
         width: 20vw;
