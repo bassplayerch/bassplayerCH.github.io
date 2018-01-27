@@ -20,6 +20,44 @@ main::before {
     margin: 0 auto;
 }
 
-.wa-mediabox-overlay.opened{
+.wa-mediabox-overlay.opened {
     z-index: 9999;
+}
+
+
+@media screen and (max-width: 959px) {
+.content-wrapper {
+    width: 90vw;
+    margin: 0 auto;
+}
+}
+@media screen and (min-width: 960px) {
+    .main {
+        margin-left: 25vw;
+        max-width: 75vw;
+    }
+    .section {
+        width: 65vw;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .main {
+        margin-left: 20vw;
+        max-width: 80vw;
+    }
+    .section {
+        width: 70vw;
+    }
+}
+
+@media screen and (min-width: 1620px) {
+    .main {
+        margin-left: 15vw;
+        max-width: 85vw;
+    }
+    .section {
+        width: 75vw;
+    }
 }

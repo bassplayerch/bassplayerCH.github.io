@@ -5,3 +5,15 @@
         width: 90vw;
     }
 }
+
+@media screen and (min-width: 960px) {
+    .gallery {
+        position: relative;
+        margin: 0 auto;
+        img {
+            width: 70%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}

@@ -12,3 +12,19 @@
 .swiper-button-prev {
     margin-left: -1rem;
 }
+
+@media screen and (min-width: 630px) {
+    .card,
+    .swiper-slide {
+        width: 80vw !important;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .card,
+    .swiper-slide {
+        width: 40vw !important;
+        margin: 0 auto;
+    }
+}

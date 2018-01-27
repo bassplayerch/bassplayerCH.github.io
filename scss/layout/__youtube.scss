@@ -1,7 +1,35 @@
 .section-youtube {
     min-height: 50vh;
-
-    .mobilePrestitial.g-flex-row-centered.g-box-full.m-enabled{
+    .mobilePrestitial.g-flex-row-centered.g-box-full.m-enabled {
         display: none !important;
     }
 }
+
+.soundcloud {
+    width: 90vw;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 960px) {
+    .soundcloud {
+        width: 46vw;
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .soundcloud {
+        width: 49vw;
+
+    }
+}
+
+@media screen and (min-width: 1620px) {
+    .soundcloud {
+        width: 53vw;
+
+    }
+}
+

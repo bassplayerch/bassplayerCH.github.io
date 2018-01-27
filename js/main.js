@@ -74,6 +74,8 @@ ready(function () {
     welcomeButton.addEventListener('click', function () {
         scrollTo(document.getElementById('about'));
     });
+
+    //scrollupbutton
     var scrollUpButton = document.querySelector('.scroll-up-button');
     scrollUpButton.addEventListener('click', function () {
         scrollTo(document.getElementById('header'));
@@ -87,7 +89,26 @@ ready(function () {
             scrollUpButton.classList.add('visible');
 
         }
+        if (window.innerWidth >= 960){
+            var navBarDesktop = document.querySelector('.desktop-navigation');
+           if (window.pageYOffset <= 110){
+               navBarDesktop.classList.remove('visible');
+           } else {
+            navBarDesktop.classList.add('visible');
+           }
+        }
+
       }, 10));
+
+    //navigation desktop
+    var desktopNavLinks = document.querySelectorAll('.desktop-navigation__link');
+    desktopNavLinks.forEach(function(navLink){
+      navLink.addEventListener('click', function(e){
+           e.preventDefault();
+           scrollTo(document.getElementById(navLink.getAttribute('data-target')));
+           
+      });
+    });
 
     //cards
     var cardFrontButtons = document.querySelectorAll('.card .card__button--front');
