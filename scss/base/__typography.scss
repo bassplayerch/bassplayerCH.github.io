@@ -10,6 +10,9 @@ body {
     font-weight: 400;
     letter-spacing: .2rem;
     transition: all .2s;
+    span {
+        color: $color-primary;
+    }
     &::first-letter {
         color: $color-primary;
     }

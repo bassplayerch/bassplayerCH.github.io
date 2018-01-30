@@ -30,7 +30,6 @@ ready(function () {
 
     // slider
     var mySwiper = new Swiper('.swiper-container', {
-        effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
@@ -41,15 +40,7 @@ ready(function () {
             modifier: 1,
             slideShadows: true,
         },
-        direction: 'horizontal',
-        loop: true,
-
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
+     
 
     })
 
