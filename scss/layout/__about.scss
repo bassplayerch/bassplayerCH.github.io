@@ -1,17 +1,9 @@
 .section-about {
-    .swiper-button-prev,
-    .swiper-button-next {
-        opacity: .7;
-        z-index: 99;
+    .card {
     }
-    .swiper-button-next {
-        margin-right: -1rem;
-    }
+
 }
 
-.swiper-button-prev {
-    margin-left: -1rem;
-}
 
 @media screen and (min-width: 630px) {
     .card,
@@ -22,6 +14,10 @@
 }
 
 @media screen and (min-width: 960px) {
+    .btn.btn--primary{
+        padding: 2rem 8rem;
+        font-size:2rem;
+    }
     .card,
     .swiper-slide {
         width: 100% !important;

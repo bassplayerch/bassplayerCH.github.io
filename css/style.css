@@ -206,8 +206,15 @@ body {
   height: 52rem;
 }
 
+@media screen and (min-width: 960px) {
+  .card {
+    height: 78rem;
+    max-height: 88vh;
+  }
+}
+
 .card__side {
-  height: 52rem;
+  height: 100%;
   transition: all .6s ease;
   position: absolute;
   top: 0;
@@ -222,16 +229,12 @@ body {
 
 .card__side--front {
   position: relative;
+  height: 100%;
   background-color: #fff;
 }
 
 .card__side--front--1 {
-  background: url("../img/mobile_background.jpg") no-repeat center center;
-  background-size: cover;
-}
-
-.card__side--front--2 {
-  background: url("../img/test.jpg") no-repeat center center;
+  background: url("../img/2.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -242,6 +245,10 @@ body {
 
 .card__side--back .paragraph {
   padding: 3rem;
+}
+
+.card__content {
+  height: 100%;
 }
 
 .card__heading {
@@ -701,12 +708,6 @@ body {
   }
 }
 
-@media screen and (min-width: 960px) {
-  .header .text-logo {
-    display: none;
-  }
-}
-
 main::before {
   content: ' ';
   display: block;
@@ -774,20 +775,6 @@ main::before {
   min-height: 50vh;
 }
 
-.section-about .swiper-button-prev,
-.section-about .swiper-button-next {
-  opacity: .7;
-  z-index: 99;
-}
-
-.section-about .swiper-button-next {
-  margin-right: -1rem;
-}
-
-.swiper-button-prev {
-  margin-left: -1rem;
-}
-
 @media screen and (min-width: 630px) {
   .card,
   .swiper-slide {
@@ -797,6 +784,10 @@ main::before {
 }
 
 @media screen and (min-width: 960px) {
+  .btn.btn--primary {
+    padding: 2rem 8rem;
+    font-size: 2rem;
+  }
   .card,
   .swiper-slide {
     width: 100% !important;

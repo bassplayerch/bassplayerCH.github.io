@@ -4,9 +4,13 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     height: 52rem;
+    @media screen and (min-width: 960px) {
+    height: 78rem;
+    max-height: 88vh;
+    }
     
     &__side {
-        height: 52rem;
+        height: 100%;
         transition: all .6s ease;
         position: absolute;
         top: 0;
@@ -21,16 +25,12 @@
 
         &--front {
             position: relative;
+            height:100%;
             background-color: $color-white;
             &--1 {
-                background: url("../img/mobile_background.jpg") no-repeat center center;
+                background: url("../img/2.jpg") no-repeat center center;
                 background-size: cover;
             }
-            &--2 {
-                background: url("../img/test.jpg") no-repeat center center;
-                background-size: cover;
-            }
-    
         }
 
         &--back {
@@ -43,6 +43,7 @@
     }
 
     &__content {
+        height: 100%;
     }
 
     &__heading {
