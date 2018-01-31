@@ -3,7 +3,7 @@
     justify-content: space-around;
     align-items: center;
     background: $color-grey-dark-2;
-    color: white;
+    color: rgba($color-white, .7);
     padding: 1.2rem;
     .paragraph {
         flex: 1;
@@ -16,10 +16,10 @@
         justify-content: space-around;
         flex: 2;
         .social-icon {
-            color: white;
+            color: rgba($color-white, .7);
             text-decoration: none;
             &:visited {
-                color: white;
+                color: rgba($color-white, .7);
             }
             &:hover {
                 color: $color-primary;

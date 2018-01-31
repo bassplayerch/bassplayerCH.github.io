@@ -12,20 +12,20 @@ ready(function () {
     var welcomeButton = document.querySelector('.btn-container a.btn');
 
     //debounce
-    var debounce = function(func, delay) {
+    var debounce = function (func, delay) {
         var inDebounce
-        return function() {
-          var context = this
-          var args = arguments
-          clearTimeout(inDebounce)
-          inDebounce = setTimeout(() => func.apply(context, args), delay)
+        return function () {
+            var context = this
+            var args = arguments
+            clearTimeout(inDebounce)
+            inDebounce = setTimeout(() => func.apply(context, args), delay)
         }
-      }
+    }
 
     //smoothScroll
     function scrollTo(element) {
-        element.scrollIntoView({behavior: "smooth", block: "start"});
-   
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+
     }
 
     // slider
@@ -40,7 +40,7 @@ ready(function () {
             modifier: 1,
             slideShadows: true,
         },
-     
+
 
     })
 
@@ -67,35 +67,35 @@ ready(function () {
 
     });
 
-    window.addEventListener('scroll', debounce(function() {
-        if (window.pageYOffset <= 110){
+    window.addEventListener('scroll', debounce(function () {
+        if (window.pageYOffset <= 110) {
             scrollUpButton.classList.remove('visible');
         } else {
             scrollUpButton.classList.add('visible');
 
         }
-        if (window.innerWidth >= 960){
+        if (window.innerWidth >= 960) {
             var navBarDesktop = document.querySelector('.desktop-navigation');
-           if (window.pageYOffset <= 110){
-               navBarDesktop.classList.remove('visible');
-               welcomeButton.classList.remove('visible');
-           } else {
-            navBarDesktop.classList.add('visible');
-            welcomeButton.classList.add('visible');
+            if (window.pageYOffset <= 110) {
+                navBarDesktop.classList.remove('visible');
+                welcomeButton.classList.remove('visible');
+            } else {
+                navBarDesktop.classList.add('visible');
+                welcomeButton.classList.add('visible');
 
-           }
+            }
         }
 
-      }, 10));
+    }, 10));
 
     //navigation desktop
     var desktopNavLinks = document.querySelectorAll('.desktop-navigation__link');
-    desktopNavLinks.forEach(function(navLink){
-      navLink.addEventListener('click', function(e){
-           e.preventDefault();
-           scrollTo(document.getElementById(navLink.getAttribute('data-target')));
-           
-      });
+    desktopNavLinks.forEach(function (navLink) {
+        navLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            scrollTo(document.getElementById(navLink.getAttribute('data-target')));
+
+        });
     });
 
     //cards
@@ -104,13 +104,16 @@ ready(function () {
     var flipFront = function (e) {
         e.preventDefault();
         this.parentNode.parentNode.parentNode.classList.add('active');
-        console.log(this);
-
+        setTimeout(function () {
+            document.querySelector('.about-container').classList.add('visible');
+        }, 200)
     }
     var flipBack = function (e) {
         e.preventDefault();
         this.parentNode.parentNode.parentNode.classList.remove('active');
-
+        setTimeout(function () {
+            document.querySelector('.about-container').classList.remove('visible');
+        }, 200)
     }
     cardFrontButtons.forEach(function (cardButton) {
         cardButton.addEventListener('click', flipFront.bind(cardButton));

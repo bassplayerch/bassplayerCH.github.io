@@ -4,6 +4,7 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     height: 52rem;
+    transform-style: "preserve-3d";
     @media screen and (min-width: 960px) {
     height: 78rem;
     max-height: 88vh;
