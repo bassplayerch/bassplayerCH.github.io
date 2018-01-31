@@ -79,9 +79,9 @@
 
 @media screen and (max-width: 960px) {
     .about-container {
-      opacity: 0;
+      display: none;
       &.visible {
-          opacity: 1;
+          display: block;
       }
     }
 }
