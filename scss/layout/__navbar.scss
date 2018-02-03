@@ -1,0 +1,24 @@
+.nav{
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    background: $color-secondary;
+    &__nav-container{
+        display: flex;
+        justify-content: space-between;
+        background:red;
+    }
+    &__link-container {
+        display: flex;
+        flex-direction: column;;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $color-primary;
+        display: block;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+}

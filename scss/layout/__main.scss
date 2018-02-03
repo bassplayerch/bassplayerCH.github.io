@@ -1,0 +1,11 @@
+.section {
+    min-height: 100vh;
+    &--light {
+        background: url('./../img/light_section.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    &--dark {
+        background: url('./../img/dark_section.jpg') no-repeat center center;
+        background-size: cover;
+    }
+}

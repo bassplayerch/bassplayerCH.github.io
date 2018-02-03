@@ -1,0 +1,10 @@
+.icon-btn {
+    padding: 1.5rem;
+    border-radius: 50%;
+    outline: 0;
+    border: 0;
+    &--white {
+        background: rgba($color-white, .9);
+        
+    }
+}
