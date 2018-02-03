@@ -1,24 +1,54 @@
-.nav{
+.nav {
     z-index: 99;
     position: fixed;
     width: 100%;
     background: $color-secondary;
-    &__nav-container{
+    display: none;
+    &__nav-container {
         display: flex;
         justify-content: space-between;
-        background:red;
+        background: $color-secondary;
+        align-items: center;
+        padding-top: 1px;
+        z-index: 99;
+        position: relative;
     }
     &__link-container {
         display: flex;
-        flex-direction: column;;
+        position: relative;
+        z-index: 98;
+        margin-top: -100px;
+        flex-direction: column;
+        border-top: 1px solid $color-primary;
+        transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.095);
+        margin-top: -600px;
+        &.open {
+            margin-top: 0;
+        }
     }
-
-    &__link{
+    &__link {
+        cursor: pointer;
         text-decoration: none;
         color: $color-primary;
         display: block;
-        padding: 1rem 2rem;
+        padding: 1.7rem 2.7rem;
         font-size: 2rem;
         text-transform: uppercase;
+        &--big {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+    }
+    &__hamburger-icon {
+        cursor: pointer;
+        color: $color-primary;
+        i {
+            font-size: 5.4rem;
+            padding-top: .5rem;
+            padding-right: .4rem;
+        }
+    }
+    &.visible{
+        display: block;
     }
 }

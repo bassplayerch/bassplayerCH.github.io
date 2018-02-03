@@ -183,6 +183,7 @@ input {
   position: fixed;
   width: 100%;
   background: #1b1b1b;
+  display: none;
 }
 
 .nav__nav-container {
@@ -192,26 +193,64 @@ input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: red;
+  background: #1b1b1b;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1px;
+  z-index: 99;
+  position: relative;
 }
 
 .nav__link-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  z-index: 98;
+  margin-top: -100px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-top: 1px solid #f1d9cd;
+  -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.095);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.095);
+  margin-top: -600px;
+}
+
+.nav__link-container.open {
+  margin-top: 0;
 }
 
 .nav__link {
+  cursor: pointer;
   text-decoration: none;
   color: #f1d9cd;
   display: block;
-  padding: 1rem 2rem;
+  padding: 1.7rem 2.7rem;
   font-size: 2rem;
   text-transform: uppercase;
+}
+
+.nav__link--big {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.nav__hamburger-icon {
+  cursor: pointer;
+  color: #f1d9cd;
+}
+
+.nav__hamburger-icon i {
+  font-size: 5.4rem;
+  padding-top: .5rem;
+  padding-right: .4rem;
+}
+
+.nav.visible {
+  display: block;
 }
 
 .btn, .btn:link, .btn:visited {
