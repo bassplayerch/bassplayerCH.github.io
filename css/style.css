@@ -77,8 +77,9 @@ input {
 }
 
 .section-title {
-  margin-top: 3rem;
-  font-size: 4.1rem;
+  margin-top: 4rem;
+  font-size: 5.1rem;
+  font-weight: 700;
   text-transform: uppercase;
   display: inline-block;
   padding: .5rem 1rem;
@@ -143,7 +144,7 @@ input {
 
 .header .btn-container {
   position: absolute;
-  bottom: 4rem;
+  bottom: 6rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -166,6 +167,7 @@ input {
 
 .section {
   min-height: 100vh;
+  text-align: center;
 }
 
 .section--light {
@@ -200,6 +202,7 @@ input {
   padding-top: 1px;
   z-index: 99;
   position: relative;
+  height: 80;
 }
 
 .nav__link-container {
@@ -235,7 +238,7 @@ input {
 
 .nav__link--big {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .nav__hamburger-icon {
@@ -244,13 +247,29 @@ input {
 }
 
 .nav__hamburger-icon i {
-  font-size: 5.4rem;
+  font-size: 5rem;
   padding-top: .5rem;
-  padding-right: .4rem;
+  padding-right: .7rem;
 }
 
 .nav.visible {
   display: block;
+}
+
+h1.referral {
+  display: none !important;
+}
+
+li.juicer {
+  display: none !important;
+}
+
+div.j-poster {
+  display: none !important;
+}
+
+.swiper-container {
+  width: 100%;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -303,6 +322,12 @@ input {
 
 .btn--secondary::after {
   background-color: #1b1b1b;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .btn::after {

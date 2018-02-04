@@ -9,24 +9,27 @@
     <meta name="theme-color" content="#BB2F3D">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
     <link href="./css/style.css" rel="stylesheet">
     <title>Belle and Bass</title>
 </head>
 
 <body>
     <header class="header">
-        <nav class="nav">
+        <nav class="nav visible">
             <div class="nav__nav-container">
                 <a href="#" class="nav__link nav__link--big">Belle and Bass</a>
-                <p href="#" class="nav__hamburger-icon"><i class="material-icons">menu</i></p>
+                <p href="#" class="nav__hamburger-icon">
+                    <i class="material-icons">menu</i>
+                </p>
             </div>
             <div class="nav__link-container">
-            <a href="#" data-src="news" class="nav__link">News</a>
-            <a href="#" data-src="about" class="nav__link">Über uns</a>
-            <a href="#" data-src="news" class="nav__link">Gallerie</a>
-            <a href="#" data-src="news" class="nav__link">Demos / Agenda</a>
-            <a href="#" data-src="news" class="nav__link">Kontakt</a>
-        </div>
+                <a href="#" data-src="news" class="nav__link">News</a>
+                <a href="#" data-src="about" class="nav__link">Über uns</a>
+                <a href="#" data-src="news" class="nav__link">Gallerie</a>
+                <a href="#" data-src="news" class="nav__link">Demos / Agenda</a>
+                <a href="#" data-src="news" class="nav__link">Kontakt</a>
+            </div>
         </nav>
         <div class="title-container">
             <h1 class="main-title u-center-text">Belle and Bass</h1>
@@ -38,12 +41,42 @@
         </div>
     </header>
     <main>
-        <section id="news" class="section section--light u-center-text">
+        <section id="news" class="section section--light section-news">
             <h2 class="section-title section-title--dark">News</h2>
+            <div class="section-content u-margin-top-medium">
+                <!-- <script src="//assets.juicer.io/embed.js" type="text/javascript"></script>
+                <link href="//assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
+                <ul class="juicer-feed u-padding-top-small" data-feed-id="belle-and-bass" data-pages="1" data-per="3" data-columns="3">
+                </ul> -->
+            </div>
         </section>
-        <section id="about" class="section section--dark"></section>
+        <section id="about" class="section section--dark section-about">
+            <h2 class="section-title section-title--light">About</h2>
+            <div class="section-content u-margin-top-medium">
+                <!-- <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"> -->
+                            <div class="card">
+                                <div class="card__side card__side--front">
+                                    <img src="./img/logo.gif" class="card__image"/>
+                                </div>
+                                <div class="card__side card__side--back">
+                                    <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi commodi ex incidunt, inventore quibusdam quo quam! Fugit, cumque quas. Facilis aspernatur vero vitae perspiciatis officia, enim aperiam incidunt tenetur adipisci a, tempora recusandae facere ipsum, in rem dolore laborum ratione qui odio reiciendis minus sed. Suscipit, corporis! Rerum, tempore labore corporis ducimus magnam illo ullam blanditiis modi inventore temporibus dignissimos iure voluptates ea qui est reiciendis in quos eligendi quia provident autem culpa molestias deserunt possimus. Recusandae voluptas vel est ad, quidem doloribus tempora, doloremque quasi placeat dicta ullam tempore, soluta itaque quibusdam ea error reprehenderit harum! Illo, magnam consectetur.</p>
+                                </div>
+                                <button class="card__button btn btn--primary btn--block">Über uns</button>                                
+                            </div>
+                        <!-- </div>
+                        <div class="swiper-slide">Kira Stahel</div>
+                        <div class="swiper-slide">Stefan Guggisberg</div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+                </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
     <script src="./js/main.js "></script>
 </body>
 

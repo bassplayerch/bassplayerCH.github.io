@@ -1,5 +1,6 @@
 .section {
     min-height: 100vh;
+    text-align: center;
     &--light {
         background: url('./../img/light_section.jpg') no-repeat center center;
         background-size: cover;

@@ -85,21 +85,33 @@ var ready = function (fn) {
     return smoothScroll
 });
 
+
+
 ready(function () {
+
+    //swiper
+    var mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      })
+
+
+  
     
     //smoothScroll
     function scrollTo(element, offset) {
-        offset = offset * -1 || 0;
+        offset = (offset * -1)|| 0;
         window.smoothScroll(element, 700, offset);
     }
-
     var navbar = document.querySelector('.nav');
-    //workaround to get the height of the navbar for the scrolling offset
-    navbar.classList.add('visible');
-    var navContainerHeight = document.querySelector('.nav__nav-container').scrollHeight;
-    navbar.classList.remove('visible');
-    
-    
+    var navContainerHeight = 71;
+
     //navigation
     var scrollDownButton = document.querySelector('.header button');
     scrollDownButton.addEventListener('click', function () {

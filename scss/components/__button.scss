@@ -47,6 +47,12 @@
         }
     }
 
+    &--block {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
     &::after {
         content: "";
         display: inline-block;
