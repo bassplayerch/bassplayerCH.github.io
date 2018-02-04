@@ -12,62 +12,48 @@
         border: none;
         cursor: pointer;
     }
-    
     &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba($color-black,.4);
+        box-shadow: 0 1rem 2rem rgba($color-black, .4);
         &::after {
-            transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
         }
     }
-    
     &:active,
     &:focus {
         outline: none;
-        transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba($color-black,.4);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .4);
     }
-
     &--primary {
         background-color: $color-primary;
         color: $color-secondary;
-
         &::after {
             background-color: $color-primary;
         }
     }
-    
+    &--flat {
+        box-shadow: none;
+        &hover,
+        active,
+        focus {
+            box-shadow: none;
+            transform: translateY(0);
+        }
+    }
     &--secondary {
         background-color: $color-secondary;
         color: $color-primary;
-
         &::after {
             background-color: $color-secondary;
         }
     }
-
     &--block {
         display: block;
         width: 100%;
         text-align: center;
     }
-
-    &::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .4s;
-    }
-    
+   
     &--animated {
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;
     }
 }
-

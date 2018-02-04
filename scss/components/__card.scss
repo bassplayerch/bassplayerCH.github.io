@@ -1,16 +1,55 @@
 .card {
-    &__image {
-
-    }
-    &__side {
-
-        &--front{
-
+    height: 52rem;
+    display: block;
+    position: relative;
+    overflow-x: hidden;
+    &__front {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+        height: 100%;
+        width: 100%;
+        transition: all .4s;
+        &.open {
+            transform: translateY(-47.6rem);
         }
-        &--back{
+    }
+    &__back {
+        background: $color-white;
+        color: $color-secondary;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    &__text {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 4rem;
+    }
+    &__image {
+        height: 99%;
+        width: 100%;
+        &--stefan{
+            background: url('./../img/stefan.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        &--kira{
+            background: url('./../img/kira.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        &--logo{
+            background: url('./../img/logo.gif') no-repeat center center;
+            background-size: cover;
         }
     }
     &__button {
-
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 79%;
     }
 }

@@ -146,4 +146,21 @@ ready(function () {
         }
     })
 
+    //card
+    var cardButtons = document.querySelectorAll('.card button');
+    var cardFronts = document.querySelectorAll('.card__front');
+
+    cardButtons.forEach(function(cardButton){
+        cardButton.addEventListener('click', function(){
+            cardButton.parentElement.classList.toggle('open');
+            if (cardButton.parentElement.classList.contains('open')){
+                cardButton.innerText = '▼';
+            } else {
+                cardButton.innerText = 'Über Uns';
+            }
+        })
+    })
+
+
+
 });
