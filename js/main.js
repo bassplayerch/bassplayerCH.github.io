@@ -483,6 +483,18 @@ ready(function() {
     });
   }
 
+  var contactLinks = document.querySelectorAll(".contactButton");
+  console.dir(contactLinks);
+
+  for (var i = 0; i < contactLinks.length; i++) {
+    contactLinks[i].addEventListener("click", function(e) {
+      var id = e.target.getAttribute("data-src");
+      scrollTo(document.getElementById(id), navContainerHeight);
+      console.log('asd');
+    });
+  }
+
+
   //sticky navbar
   //todo throttling?
   var newsSectionOffset = document.getElementById("news").offsetTop;
