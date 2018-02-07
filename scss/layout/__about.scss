@@ -1,12 +1,12 @@
 .swiper-container {
-    width: 100%;
+    max-width: 42rem;
     position: relative;
     min-height: 70vh;
 }
 
 .swiper-button-prev-custom i {
     position: absolute;
-    top: 43%;
+    top: 40%;
     left: -2rem;
     transform: translateY(-50%);
     font-size: 8rem;
@@ -16,7 +16,7 @@
 
 .swiper-button-next-custom i {
     position: absolute;
-    top: 43%;
+    top: 40%;
     right: -2rem;
     transform: translateY(-50%);
     font-size: 8rem;

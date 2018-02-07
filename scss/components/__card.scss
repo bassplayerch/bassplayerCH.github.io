@@ -4,6 +4,7 @@
     flex-direction: column;
     position: relative;
     &__front {
+        max-width: 42rem;
         z-index: 2;
         position: relative;
         height: 48rem;
@@ -28,6 +29,7 @@
             background-size: cover;
         }
         &.open {
+            -webkit-transform: translateY(-43.2rem);
             transform: translateY(-43.2rem);
         }
     }
@@ -42,6 +44,7 @@
         justify-content: center;
         align-items: center;
         z-index: 1;
+        width: 42rem;
     }
     &__text {
         width: 80%;
