@@ -1,8 +1,10 @@
 .card {
-    width: 100vw;
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 100%;
+    max-width: 42rem;
+    display: inline-block;
     &__front {
         max-width: 42rem;
         z-index: 2;
