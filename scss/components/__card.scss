@@ -6,7 +6,7 @@
     &__front {
         z-index: 2;
         position: relative;
-        height: 52rem;
+        height: 48rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -23,12 +23,16 @@
             background: url('./../img/stefan.jpg') no-repeat center center;
             background-size: cover;
         }
+        &--4 {
+            background: url('./../img/album_cover.jpg') no-repeat center center;
+            background-size: cover;
+        }
         &.open {
-            transform: translateY(-47.2rem);
+            transform: translateY(-43.2rem);
         }
     }
     &__back {
-        height: 52rem;
+        height: 48rem;
         position: absolute;
         background: $color-white;
         top: 0;

@@ -1,0 +1,42 @@
+.gigtable {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    background: rgba($color-white, .4);
+    box-shadow: 0px 0px 56px 0px rgba(0,0,0,0.05);
+    &:hover {
+        box-shadow: 0px 0px 56px 0px rgba(0,0,0,0.10);
+
+    }
+    &__thead{
+        background: $color-secondary;
+        color: $color-white;
+    }
+    &__th{
+        text-align: center;
+        padding: .5rem;
+        color: lighten($color-primary, 50%);
+    }
+
+    &__tbody{
+
+    }
+
+    &__tr{
+        &:hover {
+            background: $color-white;
+        }
+
+    }
+
+    &__td{
+        padding: .4rem;
+    }
+
+    &__thead,
+    &__tr {
+        border: 1px solid rgba($color-grey-dark, .1);
+    }
+
+}
+
