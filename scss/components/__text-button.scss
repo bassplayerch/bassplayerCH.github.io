@@ -1,0 +1,26 @@
+.text-btn{
+    background: transparent;
+    transition: all .2s;
+    border-radius: 19%;
+    border: none;
+    padding: 1rem 2rem;
+    transform: scale(1);
+    border-bottom: 1px solid black;
+    &:hover{
+        outline: 0;
+        transform: scale(1.1);
+    }
+    --white {
+        background: white;
+        color: $color-secondary;
+        &:hover {
+            background: $color-grey-light;
+        }
+    }
+    &:link, &:visited{
+        text-decoration: none;
+        color: currentColor;
+    }
+
+    
+}

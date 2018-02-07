@@ -1,3 +1,18 @@
+//foreach polyfill
+(function () {
+    if (!Array.prototype.forEach) {
+      Array.prototype.forEach = function forEach (callback, thisArg) {
+        if (typeof callback !== 'function') {
+          throw new TypeError(callback + ' is not a function');
+        }
+        var array = this;
+        thisArg = thisArg || this;
+        for (var i = 0, l = array.length; i !== l; ++i) {
+          callback.call(thisArg, array[i], i, array);
+        }
+      };
+    }
+  })();
 
 var ready = function (fn) {
     if (typeof fn !== 'function') return;
@@ -96,8 +111,8 @@ ready(function () {
         loop: true,
         // Navigation arrows
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next-custom',
+          prevEl: '.swiper-button-prev-custom',
         },
       })
 
@@ -110,7 +125,7 @@ ready(function () {
         window.smoothScroll(element, 700, offset);
     }
     var navbar = document.querySelector('.nav');
-    var navContainerHeight = 71;
+    var navContainerHeight = 72;
 
     //navigation
     var scrollDownButton = document.querySelector('.header button');
@@ -147,20 +162,19 @@ ready(function () {
     })
 
     //card
-    var cardButtons = document.querySelectorAll('.card button');
-    var cardFronts = document.querySelectorAll('.card__front');
+    var cardButtons = document.querySelectorAll('.card .card__button');
 
-    cardButtons.forEach(function(cardButton){
-        cardButton.addEventListener('click', function(){
-            cardButton.parentElement.classList.toggle('open');
-            if (cardButton.parentElement.classList.contains('open')){
-                cardButton.innerText = '▼';
+    for (var i = 0; i < cardButtons.length; i++){
+        cardButtons[i].addEventListener('click', function(e){
+            var parentNode = e.target.parentNode;
+            parentNode.classList.toggle('open');
+            if (parentNode.classList.contains('open')){
+                this.innerText = '\u25BC'
             } else {
-                cardButton.innerText = 'Über Uns';
+                this.innerText = this.getAttribute('data-text');
             }
         })
-    })
-
+    }
 
 
 });
