@@ -508,6 +508,7 @@ ready(function() {
 
   //card
   var cardButtons = document.querySelectorAll(".card .card__button");
+  var cardFronts = document.querySelectorAll(".card__front");
 
   for (var i = 0; i < cardButtons.length; i++) {
     cardButtons[i].addEventListener("click", function(e) {
@@ -517,6 +518,18 @@ ready(function() {
         this.innerText = "\u25BC";
       } else {
         this.innerText = this.getAttribute("data-text");
+      }
+    });
+  }
+
+  for (var i = 0; i < cardFronts.length; i++){
+    cardFronts[i].addEventListener('click', function(e){
+      e.target.classList.toggle('open');
+      var cardButton = e.target.querySelector('.card__button');
+      if (e.target.classList.contains("open")) {
+        cardButton.innerText = "\u25BC";
+      } else {
+        cardButton.innerText = this.getAttribute("data-text");
       }
     });
   }
